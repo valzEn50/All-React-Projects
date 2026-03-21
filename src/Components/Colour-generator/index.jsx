@@ -32,16 +32,16 @@ export default function ColorGenerate(){
   
   return (<div className="col-gen-container">
     <div class="color-con">
-      <div className="color-button-con">
-        <button onClick={() => (setColorType('rgb'))} disabled={ colorType === 'rgb' ? true : false }>Get Rgb</button>
-        <button onClick={() => (setColorType('hex'))} disabled={ colorType === 'hex' ? true : false }>Get Hex</button>
-        <button onClick={() => (colorType === 'hex' ? generateHexColor() : generateRgbColor() )}>Generate Random colour</button>
-      </div>
       <div className="display-color" style={{backgroundColor: color || 'black'}}>
         <h1>{
           colorType === 'hex' ? 'HEX Colour' : 'RGB Colour'
         }</h1>
         <h2>{color}</h2>
+      </div>
+      <div className="color-button-con">
+        <button onClick={() => (setColorType('rgb'))} disabled={ colorType === 'rgb' ? true : false }>Get Rgb</button>
+        <button onClick={() => (setColorType('hex'))} disabled={ colorType === 'hex' ? true : false }>Get Hex</button>
+        <button onClick={() => (colorType === 'hex' ? generateHexColor() : generateRgbColor() )} className='gen-btn'>Generate Random colour</button>
       </div>
     </div>
   </div>)

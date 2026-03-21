@@ -14,21 +14,28 @@
       display: flex;
       justify-content: center;
       gap: 12px;
-      width: 100%;
-      background-color: rgb(227,230,187);
-      padding: 16px;
+      background-color: rgba(227, 230, 187, 0.466);
+      backdrop-filter: blur(10px);
+      padding: 16px 24px;
       margin-bottom: 30px;
+      border: 0.5px solid rgba(179, 93, 81, 0.24);
+      border-radius: 20px;
+      box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.15);
       
       button{
         border: none;
         padding: 10px 12px;
         background-color: rgb(64,150,98);
-        font-size: 16px;
+        /* font-size: 16px; */
+        font-size: clamp(14px, 2vw, 16px);
         border-radius: 8px;
       }
       button[disabled]{
         background-color: rgb(58,107,77);
         color: rgb(167,220,188);
+      }
+      .gen-btn{
+        background-color: rgb(179 92 81);
       }
     }
     .display-color{
