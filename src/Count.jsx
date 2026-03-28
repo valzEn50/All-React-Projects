@@ -15,9 +15,9 @@ function CountThis(){
   
   return (
     <>
-      <div class="count-container">
+      <div className="count-container">
         <h1>{count}</h1>
-        <div class="buttons">
+        <div className="buttons">
           <button onClick={decrease}>Decrease</button>
           <button onClick={increase}>Increase</button>
           <button onClick={reset}>Reset</button>
