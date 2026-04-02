@@ -7,6 +7,7 @@ export default function ColorGenerate(){
   const [r, setR] = useState(randomGet(256))
   const [g, setG] = useState(randomGet(256))
   const [b, setB] = useState(randomGet(256))
+  const [hexCol, setHexCol] = useState(null)
   function randomGet(target){
     return Math.floor(Math.random()*target)
   }
@@ -17,7 +18,9 @@ export default function ColorGenerate(){
     for( let i = 0; i < 6; i++){
       hex += hexArray[randomGet(hexArray.length)];
     }
+    setHexCol(hex)
     setColor(hex)
+    value !== 100 && setValue(100)
   }
   
   
@@ -25,24 +28,37 @@ export default function ColorGenerate(){
      setR(randomGet(256))
      setG(randomGet(256))
      setB(randomGet(256))
-    
-    setColor(`rgb(${r},${g},${b})`)
+
+     value !== 100 && setValue(100)
   }
 
   function handleOpacityChange(e){
     setValue(e.target.value)
   }
   
-  useEffect(() => (
+  useEffect(() => {
     colorType === 'hex' ? generateHexColor() : generateRgbColor()
-    ), [colorType])
+    }, [colorType])
 
-    useEffect(() => {
-      colorType !== 'hex' && setColor(`rgba(${r},${g},${b},${value/100})`)
-    }, [value])
+  useEffect(() => {
+    colorType === 'hex' ? handleHexOpacity() : setColor(`rgba(${r},${g},${b},${value/100})`)
+    console.log(color)
+  }, [value])
+
+  useEffect(() => {
+      setColor(hexCol)
+    }, [hexCol])
+
+  useEffect(() => {
+      setColor(`rgb(${r},${g},${b})`)
+    }, [r,g,b])
+  
+  
+
 
     function handleHexOpacity(){
-      let hexOpcity = Math.round(value/100*255).toString(16);
+      let hexOpcity = Math.round(value/100*255).toString(16).toUpperCase();
+      setColor(hexCol+hexOpcity)
     }
 
   
