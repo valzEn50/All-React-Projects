@@ -61,6 +61,7 @@
       
       h2{
         font-size: 1.9rem;
+        user-select: all;
       }
     }
     .control-con{
