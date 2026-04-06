@@ -41,6 +41,7 @@ function RatingContent({ data, starsNo }) {
 
 }
 
+
 export default function RatingComponent({ ratingData, noOfStars = 5 }) {
     return (
         <div className="rating-con">
