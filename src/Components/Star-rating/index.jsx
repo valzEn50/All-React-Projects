@@ -17,7 +17,7 @@ function RatingContent({ data, starsNo }) {
                 </div>
                 <div className="card-lower">
                     <div className="detail-con">
-                        <p className="name">{data.name}</p>
+                        <p className="name font-extrabold">{data.name}</p>
                         <p className="title">{data.title}</p>
                     </div>
                     <div className="rating">
