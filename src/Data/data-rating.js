@@ -4,7 +4,7 @@ const dataRating = [
         id: 1,
         name: "Img 1",
         title: "Image title",
-        source: "../assets/images/img1.jpg"
+        source: ".../assets/images/img1.jpg"
     },
     {
         id: 2,
