@@ -13,7 +13,7 @@ function RatingContent({ data, starsNo }) {
         <>
             <div className="rating-profile">
                 <div className="img-con">
-                    <img src={"./src/assets/images/" + data.source} alt={data.title} className='card-img' />
+                    <img src={data.source} alt={data.title} className='card-img' />
                 </div>
                 <div className="card-lower">
                     <div className="detail-con">
