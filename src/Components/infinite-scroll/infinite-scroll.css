@@ -1,0 +1,41 @@
+.scroll-con{
+    background-color: #ffffffde;
+    padding: 20px;
+}
+.scroll-card-con{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.scroll-card{
+    img{
+        width: 100%;
+        object-fit: fill;
+        background-color: #bdbaba;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+    .card-txt{
+        color: rgb(15, 15, 15);
+        font-size: 0.85rem; 
+        padding-inline: 4px;
+    }
+}
+.loader{
+    .load-icon{
+        width: 30px;
+        height: 30px;
+        animation: spin 0.7s linear infinite;
+        margin: 0 auto;
+    }
+    width: 100%;
+    margin: 20px 0;
+
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

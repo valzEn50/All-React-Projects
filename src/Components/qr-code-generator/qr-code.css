@@ -1,0 +1,38 @@
+.qr-code-generator {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  .input-con {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 35px;
+
+    input {
+      max-width: 450px;
+      padding: 10px;
+      border: none;
+      outline: none;
+      border: 1px solid #919191;
+      flex: 1;
+      border-radius: 4px;
+    }
+
+    .button {
+      background-color: rgb(90, 177, 253);
+      padding: 8px 10px;
+      border-radius: 4px;
+      color: rgb(37, 37, 37);
+      font-weight: 600;
+      cursor: pointer;
+
+      &:disabled {
+        background-color: rgb(114, 141, 165);
+      }
+    }
+  }
+}
