@@ -9,10 +9,14 @@ import dataRating from './Data/data-rating.js'
 import NavTree from './Components/Nav-tree/index.jsx'
 import { menus } from './Components/Nav-tree/nav-data.js'
 import QRCodeGenerator from './Components/qr-code-generator/index.jsx'
+import CustomTheme from './Components/custom-useState/index.jsx'
 
 function App() {
 
   return (<>
+
+  {/* Custom Theme */}
+  <CustomTheme />
 
   {/* QR Code Generator */}
   <QRCodeGenerator />

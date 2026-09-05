@@ -1,0 +1,39 @@
+:root {
+    --primary-color: #e8f0f7;
+    --secondary-color: rgb(0, 35, 53);
+    --button-color: rgb(7,153,220);
+}
+
+[data-theme="dark"] {
+    --primary-color: #001120;
+    --secondary-color: rgb(215, 242, 255);
+    --button-color: rgb(7,153,220);
+}
+
+.custom-theme{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    transition: 0.3s ease-in-out;
+
+    h1{
+        font-size: 4.5rem;
+        margin-bottom: 30px;
+        color: var(--secondary-color);
+    }
+
+    button{
+        margin-left: 12px;
+        border: none;
+        padding: 10px 20px;
+        text-align :center;
+        background-color: var(--button-color);
+        border-radius: 7px;
+        font-size: 0.85rem;
+        cursor: pointer;
+    }
+}
